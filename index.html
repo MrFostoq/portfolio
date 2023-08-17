@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Application Styles -->
-    <link rel="stylesheet" href="dist/app.css" />
+    <link rel="stylesheet" href="dist/assets/main.css" />
   </head>
   <body class="bg-primary">
     <div class="overflow-x-hidden">
@@ -32,7 +32,7 @@
           <div class="font-bold">
             <img src="images/logo.jpg" alt="Mahdi" class="w-24" />
           </div>
-  
+
           <div
             class="space-x-0 space-y-4 w-full bg-primary flex hidden flex-col absolute top-24 md:static md:w-auto md:flex-row md:flex md:space-y-0 md:space-x-7"
             id="menu"
@@ -61,7 +61,7 @@
         </div>
       </header>
       <!-- end: Header -->
-  
+
       <!-- begin: Container-->
       <div class="px-10 space-y-20 md:px-20 lg:px-56">
         <!-- Banner -->
@@ -80,7 +80,9 @@
             >
               I am a full-stack web developer.
             </div>
-            <div class="mt-10 text-sm md:text-normal text-gray-400 tracking-widest leading-5">
+            <div
+              class="mt-10 text-sm md:text-normal text-gray-400 tracking-widest leading-5"
+            >
               <p>
                 I love building high-quality & scalable web applications from
                 scratch.
@@ -93,13 +95,27 @@
                   class="text-custom-blue hover:underline"
                   >Laravel Framework</a
                 >
-                and
+                ,
                 <a
-                  href="https://vuejs.org/"
+                  href="https://laravel-livewire.com/"
                   target="_blank"
                   class="text-custom-blue hover:underline"
-                  >VueJs</a
-                >.
+                  >Livewire</a
+                >
+                ,
+                <a
+                  href="https://alpinejs.dev/"
+                  target="_blank"
+                  class="text-custom-blue hover:underline"
+                  >Alpine.js</a
+                >
+                and
+                <a
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  class="text-custom-blue hover:underline"
+                  >Tailwin CSS</a
+                >
               </p>
             </div>
             <div class="mt-20 space-x-3">
@@ -118,7 +134,7 @@
             </div>
           </div>
         </section>
-  
+
         <!-- About Me -->
         <section class="pt-20" id="about">
           <h2
@@ -134,50 +150,54 @@
               data-aos="fade-right"
             >
               <p>
-                Hi, welcome to my portfolio! my name is Mahdi Mohammed, a software
-                developer and information engineering student at
+                Hi, welcome to my portfolio! my name is Mahdi Mohammed, a
+                software developer and information engineering student at
                 <a
                   href="https://coie-nahrain.edu.iq/"
                   class="text-custom-blue hover:underline"
                   target="_blank"
                   >Al-Nahrain University</a
                 >. <br />
-                I started my journy in programming since 2014, when I was just 11
-                years old. In 2015, I decided to focus on web app development
+                I started my journy in programming since 2014, when I was just
+                11 years old. In 2015, I decided to focus on web app development
                 after I learned so many things that helped me to become a better
                 developer. Today I have 4+ years of experience in building
                 real-world and production-ready software solutions.
               </p>
               <p>
                 Currently working as a freelance developer, building web
-                applications from scratch, and taking care of every single aspect
-                of my client's systems, including planning, designing,
+                applications from scratch, and taking care of every single
+                aspect of my client's systems, including planning, designing,
                 implementing, and maintaining.
               </p>
               <p>
-                Highly Skilled in
+                Highly Skilled with the
                 <a
-                  href="https://laravel.com/"
+                  href="https://tallstack.dev/"
                   class="text-custom-blue hover:underline"
                   target="_blank"
-                  >Laravel Framework</a
+                  >TALL Stack</a
                 >. Interested in Software Architecture and Systems Design.
               </p>
-  
+
               <div>
                 <p>These are the most technologies that I've used recently:</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-3 px-7">
                   <ul class="list-disc marker:text-custom-blue tracking-widest">
                     <li>PHP</li>
+                    <li>JavaScript</li>
+                    <li>Golang</li>
                     <li>Laravel (MVC & REST API)</li>
-                    <li>VueJs</li>
                     <li>Livewire</li>
+                    <li>GoFiber</li>
                   </ul>
                   <ul class="list-disc marker:text-custom-blue tracking-widest">
-                    <li>JavaScript</li>
+                    <li>VueJs</li>
                     <li>InertiaJs</li>
                     <li>Tailwind</li>
                     <li>Bootstrap</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
                   </ul>
                 </div>
               </div>
@@ -187,78 +207,114 @@
             </div>
           </div>
         </section>
-  
+
         <!-- Projects -->
         <section class="pt-10" id="projects">
           <h2
-            class="text-custom-blue font-bold tracking-wider mb-10 noise-effect"
+            class="text-custom-blue font-bold tracking-wider noise-effect"
             data-glitch="Projects"
             data-aos="fade-right"
           >
             Projects
           </h2>
-  
+
+          <div class="text-gray-300 tracking-wider leading-7 mb-10 mt-2">
+            <p>
+              These projects are among my favorites, crafted for my valued
+              clients ❤️.
+            </p>
+          </div>
+
           <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-            <div
-              class="transition ease-in-out border-2 border-custom-blue p-5 hover:cursor-pointer hover:-translate-y-1 hover:scale-105"
+            <a
+              href="./projects/attendance.html"
+              class="group border-2 p-4 border-transparent hover:border-custom-blue"
               data-aos="fade-right"
             >
-              <img src="images/laravel_logo.png" alt="" />
-              <h3 class="mt-5 lg:text-xl text-gray-300 tracking-wider">
+              <img src="images/projects/attendance/03.png" alt="" />
+              <h3
+                class="mt-5 lg:text-xl text-gray-300 tracking-wider group-hover:text-custom-blue"
+              >
                 Attendance Management
               </h3>
-            </div>
-  
-            <div
-              class="transition ease-in-out border-2 border-custom-blue p-5 hover:cursor-pointer hover:-translate-y-1 hover:scale-105"
+            </a>
+
+            <a
+              href="./projects/fms.html"
+              class="group border-2 p-4 border-transparent hover:border-custom-blue"
               data-aos="fade-left"
             >
-              <img src="images/laravel_logo.png" alt="" />
-              <h3 class="mt-5 lg:text-xl text-gray-300 tracking-wider">
+              <img src="images/projects/fms/03.png" alt="" />
+              <h3
+                class="mt-5 lg:text-xl text-gray-300 tracking-wider group-hover:text-custom-blue"
+              >
                 Form Management
               </h3>
-            </div>
-  
-            <div
-              class="transition ease-in-out border-2 border-custom-blue p-5 hover:cursor-pointer hover:-translate-y-1 hover:scale-105"
-              data-aos="fade-right"
-            >
-              <img src="images/laravel_logo.png" alt="" />
-              <h3 class="mt-5 lg:text-xl text-gray-300 tracking-wider">
-                Multi Tenant CMS
-              </h3>
-            </div>
-  
-            <div
-              class="transition ease-in-out border-2 border-custom-blue p-5 hover:cursor-pointer hover:-translate-y-1 hover:scale-105"
+            </a>
+
+            <a
+              href="./projects/dms.html"
+              class="group border-2 p-4 border-transparent hover:border-custom-blue"
               data-aos="fade-left"
             >
-              <img src="images/laravel_logo.png" alt="" />
-              <h3 class="mt-5 lg:text-xl text-gray-300 tracking-wider">
+              <img src="images/projects/dms/02.png" alt="" />
+              <h3
+                class="mt-5 lg:text-xl text-gray-300 tracking-wider group-hover:text-custom-blue"
+              >
+                Document Management System
+              </h3>
+            </a>
+
+            <a
+              href="./projects/admissions.html"
+              class="group border-2 p-4 border-transparent hover:border-custom-blue"
+              data-aos="fade-right"
+            >
+              <img src="images/projects/admissions/3.png" alt="" />
+              <h3
+                class="mt-5 lg:text-xl text-gray-300 tracking-wider group-hover:text-custom-blue"
+              >
+                Scholarship Admissions
+              </h3>
+            </a>
+
+            <a
+              href="./projects/trip.html"
+              class="group border-2 p-4 border-transparent hover:border-custom-blue"
+              data-aos="fade-left"
+            >
+              <img src="images/projects/trip/11.png" alt="" />
+              <h3
+                class="mt-5 lg:text-xl text-gray-300 tracking-wider group-hover:text-custom-blue"
+              >
                 Trip App REST API
               </h3>
-            </div>
-  
-            <div
-              class="transition ease-in-out border-2 border-custom-blue p-5 hover:cursor-pointer hover:-translate-y-1 hover:scale-105"
-              data-aos="fade-right"
-            >
-              <img src="images/laravel_logo.png" alt="" />
-              <h3 class="mt-5 lg:text-xl text-gray-300 tracking-wider">
-                Real Estates REST API
-              </h3>
-            </div>
-  
-            <div
-              class="transition ease-in-out border-2 border-custom-blue p-5 hover:cursor-pointer hover:-translate-y-1 hover:scale-105"
-              data-aos="fade-left"
-            >
-              <img src="images/laravel_logo.png" alt="" />
-              <h3 class="mt-5 lg:text-xl text-gray-300 tracking-wider">LMS</h3>
-            </div>
+            </a>
+          </div>
+
+          <div class="text-gray-300 tracking-wider leading-7 mt-10">
+            <p>
+              I have also developed some simple open-source projects, including
+              simple a
+              <a
+                href="https://github.com/mahdi-mk/laravel-blog"
+                class="text-custom-blue hover:underline"
+                target="_blank"
+              >
+                Blog System
+              </a>
+              and
+              <a
+                href="https://github.com/mahdi-mk/time-tracker-api"
+                class="text-custom-blue hover:underline"
+                target="_blank"
+              >
+                Time Tracker REST API with Golang </a
+              >.
+            </p>
           </div>
         </section>
-  
+
         <!-- Experience -->
         <section class="pt-10" id="experience">
           <h2
@@ -268,26 +324,32 @@
           >
             Experience
           </h2>
-  
+
           <div class="space-y-7">
             <div class="border-l-2 border-custom-blue p-5" data-aos="fade-up">
-              <h3 class="text-xl lg:text-2xl text-gray-200">Freelancer</h3>
+              <h3 class="text-xl lg:text-2xl text-gray-200">
+                Freelance Web Developer
+              </h3>
               <span class="text-gray-100 font-thin mt-5 text-sm md:text-base"
                 >Mar 2018 - Sep 2019</span
               >
-  
+
               <div class="mt-5 px-5">
                 <ul
                   class="list-disc marker:text-custom-blue tracking-widest text-gray-200 space-y-2"
                 >
                   <li>
-                    Contributed to building Cinema Web Application using Laravel
-                    MVC.
+                    Played a role in constructing a Cinema Web Application using
+                    the Laravel MVC architecture.
+                  </li>
+                  <li>
+                    Participated in the development of a basic Learning
+                    Management System (LMS).
                   </li>
                 </ul>
               </div>
             </div>
-  
+
             <div class="border-l-2 border-custom-blue p-5" data-aos="fade-up">
               <h3 class="text-xl md:text-2xl text-gray-200">
                 Al-Mustashar Tech.
@@ -295,47 +357,51 @@
               <span class="text-gray-100 font-thin mt-5 text-sm md:text-base"
                 >Dec 2019 - Oct 2021</span
               >
-  
+
               <div class="mt-5 px-5">
                 <ul
                   class="list-disc marker:text-custom-blue tracking-widest text-gray-200 space-y-2"
                 >
-                  <li>Joined an Iraqi startup as a full-time web developer.</li>
                   <li>
-                    Contributed to designing and building multi-tenant Content
-                    Management Systems using Laravel Framework.
+                    Engaged as a full-time web developer with an Iraqi startup
+                    company.
                   </li>
                   <li>
-                    Built plenty of Laravel packages (plugins) such as blog, poll
-                    system, file manager, and more.
+                    Played a role in the design and construction of multi-tenant
+                    Content Management Systems utilizing the Laravel Framework.
                   </li>
                   <li>
-                    Contributed to building Travel Agency (Safraty) REST API with
-                    a fully functional admin panel.
+                    Constructed numerous Laravel packages, including a blog,
+                    poll system, file manager, and various others.
                   </li>
                   <li>
-                    Contributed to building Real Estates Platform REST API with a
-                    fully functional admin panel.
+                    Played a part in developing the REST API for a Travel Agency
+                    (Safraty) along with a fully operational admin panel.
+                  </li>
+                  <li>
+                    Contributed to the development of the REST API for a Real
+                    Estates Platform, complete with a fully operational admin
+                    panel.
                   </li>
                 </ul>
               </div>
             </div>
-  
+
             <div class="border-l-2 border-custom-blue p-5" data-aos="fade-up">
               <h3 class="text-xl md:text-2xl text-gray-200">
-                Remote Software Developer
+                Freelance Software Developer
               </h3>
               <span class="text-gray-100 font-thin mt-5 text-sm md:text-base"
                 >May 2022 - Present</span
               >
-  
+
               <div class="mt-5 px-5">
                 <ul
                   class="list-disc marker:text-custom-blue tracking-widest text-gray-200 space-y-3 md:space-y-2"
                 >
                   <li>
-                    Planned, designed, and implemented an Attendance Management
-                    System that works with biometric devices for the
+                    Strategically planned, designed, and executed an Attendance
+                    Management System integrated with biometric devices for the
                     <a
                       href="https://www.isc.gov.iq/index.php?do=view&type=pages&id=32&lang=en"
                       target="_blank"
@@ -344,8 +410,8 @@
                     >.
                   </li>
                   <li>
-                    Contributed to building Form Management System with dynamic
-                    workflows for the
+                    Contributed to the construction of a Form Management System
+                    featuring dynamic workflows for the
                     <a
                       href="https://en.uobaghdad.edu.iq/"
                       target="_blank"
@@ -368,7 +434,7 @@
             </div>
           </div>
         </section>
-  
+
         <!-- Contact -->
         <section class="pt-10" id="contact">
           <div class="mb-14">
@@ -383,7 +449,7 @@
               My inbox is always open, you can ask me anything.
             </p>
           </div>
-  
+
           <a
             href="mailto:mahdi.m.almousawi@gmail.com"
             target="_blank"
@@ -394,16 +460,18 @@
         </section>
       </div>
       <!-- end: Container-->
-  
+
       <!-- begin: Footer-->
       <footer class="mt-20">
         <div
           class="flex flex-col justify-between md:flex-row md:justify-between items-center px-20 py-10"
         >
-          <div class="text-xs md:text-sm text-gray-300 font-light tracking-wider">
+          <div
+            class="text-xs md:text-sm text-gray-300 font-light tracking-wider"
+          >
             Made with ❤️ by <strong>Mahdi Mohammed</strong>
           </div>
-  
+
           <div class="flex items-center space-x-4 mt-5 md:mt-0">
             <!-- Github Link -->
             <a href="https://github.com/mahdi-mk" target="_blank">
@@ -425,7 +493,7 @@
                 />
               </svg>
             </a>
-  
+
             <!-- Linkedin Link -->
             <a
               href="https://www.linkedin.com/in/mahdi-mohammed-3b48021b7/"
@@ -451,9 +519,12 @@
                 <path d="M16 16v-3a2 2 0 0 0 -4 0" />
               </svg>
             </a>
-  
+
             <!-- Instagram Link -->
-            <a href="https://www.instagram.com/mahdi.almousawii/" target="_blank">
+            <a
+              href="https://www.instagram.com/mahdi.almousawii/"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-brand-instagram"

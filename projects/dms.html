@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahdi Mohammed</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animation On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="../dist/assets/main.css" />
+  </head>
+  <body class="bg-primary">
+    <!-- Container -->
+    <div class="px-10 py-5">
+      <!-- Project Title -->
+      <div class="border-b border-custom-blue pb-3 mb-10">
+        <h1 class="text-custom-blue text-3xl font-bold tracking-wider">
+          Document Management System
+        </h1>
+      </div>
+
+      <!-- Gallery -->
+      <div
+        class="grid grid-cols-3 gap-3"
+        x-data="{ current: '../images/projects/dms/01.png' }"
+      >
+        <div class="grid grid-cols-3 gap-2">
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/01.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/02.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/03.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/04.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/05.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/06.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/07.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/08.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/09.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/10.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/11.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/12.png"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/dms/13.png"
+            alt=""
+          />
+        </div>
+        <div class="flex justify-center col-span-2">
+          <img x-bind:src="current" alt="Project Preview" class="w-full" />
+        </div>
+      </div>
+
+      <!-- Project Details -->
+      <div class="px-10 md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
+        <!-- Features -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              Features
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+            >
+              <li>
+                Multi-user system where each user possesses an individual
+                account with distinct roles and permissions.
+              </li>
+              <li>
+                Dynamic roles & permissions. Roles can be applied to
+                departments.
+              </li>
+              <li>
+                The ability to add documents, assign them to specifics
+                organization(s) or user(s).
+              </li>
+              <li>
+                Documents can have attachments, relations, margins and nested
+                versions.
+              </li>
+              <li>
+                Each document has its own discussion to help employees comment
+                and communicate with each other.
+              </li>
+              <li>
+                Advanced datatables with filters, pagincation, column toggling,
+                and smart search functionality.
+              </li>
+              <li>
+                Additionally, the platform offers seamless email notifications,
+                password resetting, email verification, and multi-language.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- My Role -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              My Role
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+            >
+              <li>
+                Facilitated comprehensive requirement gathering processes.
+              </li>
+              <li>
+                Strategized project planning and decisive construction
+                deliberations.
+              </li>
+              <li>Database design and optimization strategies.</li>
+              <li>
+                Executed project implementation utilizing cutting-edge
+                market-available technologies.
+              </li>
+              <li>
+                Ensured project sustainability through vigilant maintenance and
+                proficient bug resolution.
+              </li>
+              <li>
+                Crafted intuitive user interfaces through thoughtful design
+                processes.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technologies -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              Technologies
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+            >
+              <li>Laravel 10.x & PHP 8.x</li>
+              <li>MySql</li>
+              <li>Livewire</li>
+              <li>Alpine JS</li>
+              <li>Tailwind CSS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script src="../dist/assets/main.js"></script>
+  </body>
+</html>
