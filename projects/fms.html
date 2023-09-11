@@ -24,19 +24,24 @@
   </head>
   <body class="bg-primary">
     <!-- Container -->
-    <div class="px-10 py-5">
+    <div class="px-7 md:px-10 py-5">
       <!-- Project Title -->
       <div class="border-b border-custom-blue pb-3 mb-10">
-        <h1 class="text-custom-blue text-3xl font-bold tracking-wider">
-          Form Management System
+        <h1
+          class="text-custom-blue text-2xl md:text-3xl font-bold tracking-wider"
+        >
+          Form Management
         </h1>
       </div>
 
       <!-- Gallery -->
       <div
-        class="grid grid-cols-3 gap-3"
+        class="grid grid-cols-1 md:grid-cols-3 gap-3"
         x-data="{ current: '../images/projects/fms/01.png' }"
       >
+        <div class="flex justify-center col-span-2">
+          <img x-bind:src="current" alt="Project Preview" class="w-full" />
+        </div>
         <div class="grid grid-cols-3 gap-2">
           <img
             @click="current = $el.src"
@@ -144,13 +149,10 @@
             alt=""
           />
         </div>
-        <div class="flex justify-center col-span-2">
-          <img x-bind:src="current" alt="Project Preview" class="w-full" />
-        </div>
       </div>
 
       <!-- Project Details -->
-      <div class="px-10 md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
+      <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
         <!-- Features -->
         <section>
           <div class="mb-14">
@@ -160,7 +162,7 @@
               Features
             </h2>
             <ul
-              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
               <li>
                 Multi-user system where each user possesses an individual
@@ -173,8 +175,8 @@
                 specific user(s).
               </li>
               <li>
-                Integrated with Form.io to improve the way forms are built
-                professionally.
+                Integrated with Form.io to make form building more
+                user-friendly.
               </li>
               <li>Dynamic approval workflows.</li>
               <li>Dynamic roles & permissions.</li>
@@ -199,28 +201,17 @@
               My Role
             </h2>
             <ul
-              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
-              <li>
-                Facilitated comprehensive requirement gathering processes.
-              </li>
-              <li>
-                Strategized project planning and decisive construction
-                deliberations.
-              </li>
+              <li>Requirement gathering processes.</li>
+              <li>Project planning and decision making.</li>
               <li>Database design and optimization strategies.</li>
               <li>
                 Executed project implementation utilizing cutting-edge
                 market-available technologies.
               </li>
-              <li>
-                Ensured project sustainability through vigilant maintenance and
-                proficient bug resolution.
-              </li>
-              <li>
-                Crafted intuitive user interfaces through thoughtful design
-                processes.
-              </li>
+              <li>Ensured project sustainability and performance.</li>
+              <li>Crafted intuitive user interfaces.</li>
             </ul>
           </div>
         </section>
@@ -234,7 +225,7 @@
               Technologies
             </h2>
             <ul
-              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
               <li>Laravel 9.x & PHP 8.x</li>
               <li>MySql</li>

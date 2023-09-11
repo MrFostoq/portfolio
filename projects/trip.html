@@ -24,19 +24,24 @@
   </head>
   <body class="bg-primary">
     <!-- Container -->
-    <div class="px-10 py-5">
+    <div class="px-7 md:px-10 py-5">
       <!-- Project Title -->
       <div class="border-b border-custom-blue pb-3 mb-10">
-        <h1 class="text-custom-blue text-3xl font-bold tracking-wider">
+        <h1
+          class="text-custom-blue text-2xl md:text-3xl font-bold tracking-wider"
+        >
           Trip Application (REST API & Admin Panel)
         </h1>
       </div>
 
       <!-- Gallery -->
       <div
-        class="grid grid-cols-3 gap-3"
+        class="grid grid-cols-1 md:grid-cols-3 gap-3"
         x-data="{ current: '../images/projects/trip/01.png' }"
       >
+        <div class="flex justify-center col-span-2">
+          <img x-bind:src="current" alt="Project Preview" class="w-full" />
+        </div>
         <div class="grid grid-cols-3 gap-2">
           <img
             @click="current = $el.src"
@@ -144,13 +149,10 @@
             alt=""
           />
         </div>
-        <div class="flex justify-center col-span-2">
-          <img x-bind:src="current" alt="Project Preview" class="w-full" />
-        </div>
       </div>
 
       <!-- Project Details -->
-      <div class="px-10 md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
+      <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
         <!-- Features -->
         <section>
           <div class="mb-14">
@@ -160,7 +162,7 @@
               Features
             </h2>
             <ul
-              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
               <li>
                 Multi-user system where each user possesses an individual
@@ -194,15 +196,15 @@
               My Role
             </h2>
             <ul
-              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
               <li>
                 Collaborated within a team of developers throughout the duration
                 of the project.
               </li>
               <li>
-                Completed tasks assigned by managers in a timely and efficient
-                manner.
+                Completed tasks assigned by the team leader in a timely and
+                efficient manner.
               </li>
               <li>
                 Contributed to database design and optimization strategies.
@@ -220,7 +222,7 @@
               Technologies
             </h2>
             <ul
-              class="list-disc marker:text-custom-blue tracking-widest space-y-4 pl-5"
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
               <li>Laravel 6.x & PHP 7.x</li>
               <li>MySql</li>
