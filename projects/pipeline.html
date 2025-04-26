@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abd Al-Rahman Monther</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.ico" />
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animation On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="../dist/assets/main.css" />
+  </head>
+  <body class="bg-primary">
+    <!-- Container -->
+    <div class="px-7 md:px-10 py-5">
+      <!-- Project Title -->
+      <div class="border-b border-custom-blue pb-3 mb-10">
+        <h1
+          class="text-custom-blue text-2xl md:text-3xl font-bold tracking-wider"
+        >
+        CI/CD pipeline using Jenkins
+        </h1>
+      </div>
+
+      <!-- Gallery -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-3"
+        x-data="{ current: '../images/projects/jenkins-pipeline/arch.jpg' }"
+      >
+        <div class="flex justify-center md:col-span-2">
+          <img x-bind:src="current" alt="Project Preview" class="w-full" />
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/arch.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/EC2.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/pipeline.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/cred.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/jops.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/status.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/nexus.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/sonarqupe.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/sonarqupe2.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/jenkins-pipeline/slack.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Project Details -->
+      <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
+        <!-- Features -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              Features
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
+            >
+              <li>Based on cloud - all servers built on EC2 instance.</li>
+              <li>Automated Code Integration – Fetches code from GitHub.</li>
+              <li>Build & Test Automation – Uses Maven for building and unit testing.</li>
+              <li>Code Quality Analysis – SonarQube integration with quality gates.</li>
+              <li>Artifact Management – Stores builds in Nexus OSS.</li>
+              <li>Scalability & Flexibility – Multi-user support with configurations.</li>
+              <li>Automated Notifications – Email alerts for pipeline status.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- My Role -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              My Role
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
+            >
+              <li>
+                Create instance for servers on AWS.
+              </li>
+              <li>Write bash script to install servers on instance.</li>
+              <li>Write jenkins file to automate the processes.</li>
+              <li>Set up credentials for authentication.</li>
+              <li>Install plugin and configure the tools.</li>
+              <li>Test the pipeline and servers.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technologies -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              Technologies
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
+            >
+              <li>jenkins</li>
+              <li>AWS</li>
+              <li>sonarQupe</li>
+              <li>nexus OSS</li>
+              <li>slack notification</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script src="../dist/assets/main.js"></script>
+  </body>
+</html>
