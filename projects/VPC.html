@@ -1,214 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abd Al-Rahman Monther</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abd Al-Rahman Monther</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.ico" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../images/logo.ico" />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Family -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+    <!-- Animation On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <!-- Animation On Scroll -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Application Styles -->
-  <link rel="stylesheet" href="../dist/assets/main.css" />
-</head>
-
-<body class="bg-primary">
-  <!-- Container -->
-  <div class="px-7 md:px-10 py-5">
-    <!-- Project Title -->
-    <div class="border-b border-custom-blue pb-3 mb-10">
-      <h1 class="text-custom-blue text-2xl md:text-3xl font-bold tracking-wider">
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="../dist/assets/main.css" />
+  </head>
+  <body class="bg-primary">
+    <!-- Container -->
+    <div class="px-7 md:px-10 py-5">
+      <!-- Project Title -->
+      <div class="border-b border-custom-blue pb-3 mb-10">
+        <h1
+          class="text-custom-blue text-2xl md:text-3xl font-bold tracking-wider"
+        >
         Virtual private cloud
-      </h1>
-    </div>
-    <!-- Gallery -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3" x-data="{ 
-      current: '../images/projects/VPC/1.jpg', 
-      currentType: 'image',
-      setCurrent(src, type) {
-        this.current = src;
-        this.currentType = type;
-      
-      if (type === 'video') {
-        this.$nextTick(() => {
-          let video = this.$refs.currentVideo;
-          if (video) {
-            video.pause();  // Pause any previous video
-            video.currentTime = 0;  // Reset video to start
-            video.play();  // Auto-play the new video
-          }
-        });
-      }
-      }
-    }"
-    >
-      <!-- Display Selected Media -->
-      <div class="flex justify-center col-span-2">
-        <template x-if="currentType === 'image'">
+        </h1>
+      </div>
+
+      <!-- Gallery -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-3"
+        x-data="{ current: '../images/projects/VPC/1.jpg' }"
+      >
+        <div class="flex justify-center md:col-span-2">
           <img x-bind:src="current" alt="Project Preview" class="w-full" />
-        </template>
-
-        <template x-if="currentType === 'video'">
-          <video x-ref="currentVideo" controls class="w-full" muted>
-            <source x-bind:src="current" type="video/mp4" />
-          </video>
-        </template>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/1.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/2.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/3.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/4.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/5.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/6.jpg"
+            alt=""
+          />
+          <img
+            @click="current = $el.src"
+            class="p-2 border hover:border-custom-blue cursor-pointer"
+            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
+            src="../images/projects/VPC/7.jpg"
+            alt=""
+          />
+        </div>
       </div>
 
-      <!-- Thumbnail Selection -->
-      <div class="grid grid-cols-3 gap-2">
-        <!-- Image Thumbnails -->
-        <template x-for="num in 7">
-          <img :src="`../images/projects/VPC/${num}.jpg`" @click="setCurrent($el.src, 'image')"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'" alt="" />
-        </template>
+      <!-- Project Details -->
+      <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
+        <!-- Features -->
+        <section>
+          <div class="mb-14">
+            <h2 class="text-custom-blue font-bold tracking-wider noise-effect mb-5">
+               Description 
+            </h2>
+            
+            <ul class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base">
+              <li>
+                The project describes a high-availability 
+                Virtual Private Cloud (VPC) infrastructure.
+              </li>
+              <li>A VPC NAT gateway is used for private subnet traffic.</li>
+              <li>An internet gateway enables communication between the VPC and the internet.</li>
+              <li>
+                A version host security group manages traffic rules for the NAT gateway.
+              </li>
+              <li>Public subnet is accessible from the internet,
+                and route table is associated with this subnet to control traffic flow.
+              </li>
+              <li>Private  subnet is not directly accessible
+                 from the internet, providing an additional layer of security,
+                 and route table is also associated with this subnet to manage internal traffic.</li>
+              <li>
+                The private subnet can include any service 
+                in this case we use ec2 and run web page 
+              </li>
+            </ul>
+          </div>
+        </section>
 
-        <!-- Video Thumbnail -->
-        <video @click="setCurrent($el.querySelector('source').src, 'video')"
-          class="p-2 border hover:border-custom-blue cursor-pointer"
-          :class="current === $el.querySelector('source').src ? 'border-custom-blue' : 'border-transparent'" muted>
-          <source src="../images/projects/VPC/video.mp4" type="video/mp4"/>
-        </video>
+        <!-- My Role -->
+        <!-- <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              My Role
+            </h2>
+            <ul
+              class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
+            >
+              <li>
+                Create instance for servers on AWS.
+              </li>
+              <li>Write bash script to install servers on instance.</li>
+              <li>Write jenkins file to automate the processes.</li>
+              <li>Set up credentials for authentication.</li>
+              <li>Install plugin and configure the tools.</li>
+              <li>Test the pipeline and servers.</li>
+            </ul>
+          </div>
+        </section> -->
+
+        <!-- Technologies -->
+        <section>
+          <div class="mb-14">
+            <h2 class="text-custom-blue font-bold tracking-wider noise-effect mb-5">
+              Technologies
+            </h2>
+            <ul class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base">
+              <li>VPC</li>
+              <li>EC2</li>
+              <li>Security group</li>
+              <li>Load Balancer</li>
+              <li>Nat && Intrnet gateway</li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </div>
-
-
-    <!-- <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/09.png"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/10.png"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/11.png"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/12.png"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/13.png"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/14.png"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/fms/15.png"
-            alt=""
-          /> -->
-  </div>
-  </div>
-
-  <!-- Project Details -->
-  <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
-    <!-- Features -->
-    <section>
-      <div class="mb-14">
-        <h2 class="text-custom-blue font-bold tracking-wider noise-effect mb-5">
-          Description
-        </h2>
-        
-        <ul class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base">
-          <li>
-            The project describes a high-availability 
-            Virtual Private Cloud (VPC) infrastructure.
-          </li>
-          <li>A VPC NAT gateway is used for private subnet traffic.</li>
-          <li>An internet gateway enables communication between the VPC and the internet.</li>
-          <li>
-            A version host security group manages traffic rules for the NAT gateway.
-          </li>
-          <li>Public subnet is accessible from the internet,
-            and route table is associated with this subnet to control traffic flow.
-          </li>
-          <li>Private  subnet is not directly accessible
-             from the internet, providing an additional layer of security,
-             and route table is also associated with this subnet to manage internal traffic.</li>
-          <li>
-            The private subnet can include any service 
-            in this case we use ec2 and run web page 
-          </li>
-        </ul>
       </div>
-    </section>
 
-    <!-- My Role
-    <section>
-      <div class="mb-14">
-        <h2 class="text-custom-blue font-bold tracking-wider noise-effect mb-5">
-          My Role
-        </h2>
-        <ul class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base">
-          <li>Requirement gathering processes.</li>
-          <li>Project planning and decision making.</li>
-          <li>Database design and optimization strategies.</li>
-          <li>
-            Executed project implementation utilizing cutting-edge
-            market-available technologies.
-          </li>
-          <li>Ensured project sustainability and performance.</li>
-          <li>Crafted intuitive user interfaces.</li>
-        </ul>
-      </div>
-    </section> -->
-
-    <!-- Technologies -->
-    <section>
-      <div class="mb-14">
-        <h2 class="text-custom-blue font-bold tracking-wider noise-effect mb-5">
-          Technologies
-        </h2>
-        <ul class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base">
-          <li>VPC</li>
-          <li>EC2</li>
-          <li>Security group</li>
-          <li>Load Balancer</li>
-          <li>Nat && Intrnet gateway</li>
-        </ul>
-      </div>
-    </section>
-  </div>
-  </div>
-
-  <!-- Application Scripts -->
-  <script src="../dist/assets/main.js"></script>
-</body>
-
+    <!-- Application Scripts -->
+    <script src="../dist/assets/main.js"></script>
+  </body>
 </html>
