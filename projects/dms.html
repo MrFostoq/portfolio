@@ -139,6 +139,17 @@
 
       <!-- Project Details -->
       <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+            Project Overview
+            </h2>
+            <h1>
+              Designed and deployed a cloud-native microservices architecture using Kubernetes on AWS. This setup simulates a real-world web application stack, showcasing integration between various backend services and persistent storage. The architecture ensures scalability, resilience, and secure access to resources, following best practices in cloud-native deployments.
+            </h1>
+            <br>
         <!-- Features -->
         <section>
           <div class="mb-14">
@@ -151,39 +162,33 @@
               class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
               <li>
-                Multi-user system where each user possesses an individual
-                account with distinct roles and permissions.
+                Ingress resource configured for HTTP routing to internal services.
               </li>
               <li>
-                Dynamic roles & permissions. Roles can be applied to departments
-                as well.
+                Kubernetes Services used to expose RabbitMQ, Memcached, and MySQL.
               </li>
               <li>
-                The ability to add documents, assign them to specifics
-                organization(s) or user(s).
+                Secure communication using Kubernetes Secrets for sensitive data.
               </li>
               <li>
-                Documents can have attachments, relations, margins and nested
-                versions.
+                Real-time communication between components using services like RabbitMQ and Memcached.
               </li>
               <li>
                 Each document has its own discussion to help employees comment
                 and communicate with each other.
               </li>
               <li>
-                Advanced datatables with filters, pagincation, column toggling,
-                and smart search functionality.
+                Persistent storage via EBS volumes using dynamic provisioning with StorageClass and PVC.
               </li>
               <li>
-                Additionally, the platform offers seamless email notifications,
-                password resetting, email verification, and multi-language.
+                Additionally, the architecture suited for cloud-native applications.
               </li>
             </ul>
           </div>
         </section>
 
         <!-- My Role -->
-        <section>
+        <!-- <section>
           <div class="mb-14">
             <h2
               class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
@@ -204,7 +209,7 @@
               <li>Crafted intuitive user interfaces.</li>
             </ul>
           </div>
-        </section>
+        </section> -->
 
         <!-- Technologies -->
         <section>
@@ -217,12 +222,12 @@
             <ul
               class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
-              <li>Laravel 10.x & PHP 8.x</li>
-              <li>MySql</li>
-              <li>Livewire</li>
-              <li>Alpine JS</li>
-              <li>Tailwind CSS</li>
-              <li>Docker</li>
+              <li>AWS Cloud</li>
+              <li>Kubernetes</li>
+              <li>Docker Compose</li>
+              <li>EBS Volumes</li>
+              <li>NGINX Ingress</li>
+              <li>Kubernetes Secrets</li>
             </ul>
           </div>
         </section>
