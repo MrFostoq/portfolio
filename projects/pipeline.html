@@ -37,7 +37,7 @@
       <!-- Gallery -->
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-3"
-        x-data="{ current: '../images/projects/jenkins-pipeline/arch.jpg' }"
+        x-data="{ current: '../images/projects/jenkins-pipeline/img1.png' }"
       >
         <div class="flex justify-center md:col-span-2">
           <img x-bind:src="current" alt="Project Preview" class="w-full" />
@@ -47,76 +47,69 @@
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/arch.jpg"
+            src="../images/projects/jenkins-pipeline/img1.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/EC2.jpg"
+            src="../images/projects/jenkins-pipeline/img2.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/pipeline.jpg"
+            src="../images/projects/jenkins-pipeline/img3.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/cred.jpg"
+            src="../images/projects/jenkins-pipeline/img4.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/jops.jpg"
+            src="../images/projects/jenkins-pipeline/img5.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/status.jpg"
+            src="../images/projects/jenkins-pipeline/img6.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/nexus.jpg"
+            src="../images/projects/jenkins-pipeline/img7.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/sonarqupe.jpg"
+            src="../images/projects/jenkins-pipeline/img8.png"
             alt=""
           />
           <img
             @click="current = $el.src"
             class="p-2 border hover:border-custom-blue cursor-pointer"
             :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/sonarqupe2.jpg"
-            alt=""
-          />
-          <img
-            @click="current = $el.src"
-            class="p-2 border hover:border-custom-blue cursor-pointer"
-            :class="current == $el.src ? 'border-custom-blue' : 'border-transparent'"
-            src="../images/projects/jenkins-pipeline/slack.jpg"
+            src="../images/projects/jenkins-pipeline/img9.png"
             alt=""
           />
         </div>
       </div>
 
-      <!-- Project Details -->
+      <!-- Project Overview -->
       <div class="md:px-20 lg:px-56 text-gray-50 space-y-10 mt-10">
         <section>
           <div class="mb-14">
@@ -126,9 +119,51 @@
             Project Overview
             </h2>
             <h1>
-              Implemented a full CI/CD pipeline using Jenkins, enabling automated build, test, code analysis, and artifact deployment for Java-based applications. The pipeline integrates tools such as GitHub, Maven, SonarQube, and Nexus OSS to ensure code quality and efficient delivery. This project simulates a real-world DevOps workflow that automates every stage from code commit to deployment-ready artifacts.
+              <p>
+                This project implements a <strong>complete DevOps CI/CD pipeline</strong> on AWS using best practices for automation, security, and scalability.
+                Developers push code to a GitHub repository, which triggers a Jenkins pipeline to build and test the application using Maven.
+                SonarQube analyzes the code for bugs and code smells.
+                The application is then containerized using Docker and pushed to Docker Hub.
+                Trivy scans the image for security issues.
+              </p>
+              <br>
+              <p>
+                Once validated, the corresponding Kubernetes manifests are updated in a GitHub repository.
+                Argo CD pulls these manifests and deploys the application to an Amazon EKS cluster.
+                Finally, deployment notifications are sent to a Slack channel.
+              </p>
+              <br>
+              <p>
+                This setup ensures <strong>fast, secure, and reliable</strong> software delivery in a production-grade Kubernetes environment.
+              </p>
             </h1>
             <br>
+
+            <!-- Videos -->
+        <section>
+          <div class="mb-14">
+            <h2
+              class="text-custom-blue font-bold tracking-wider noise-effect mb-5"
+            >
+              Videos
+            </h2>
+
+            <div class="space-y-8">
+              <video
+                src="../images/projects/jenkins-pipeline/part1.mp4"
+                controls
+              ></video>
+            </div>
+          </div>
+          <div class="space-y-8">
+              <video
+                src="../images/projects/jenkins-pipeline/part2.mp4"
+                controls
+              ></video>
+            </div>
+          </div>
+        </section>
+
         <!-- Features -->
         <section>
           <div class="mb-14">
@@ -140,13 +175,12 @@
             <ul
               class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
-              <li>Based on cloud - all servers built on EC2 instance.</li>
-              <li>Automated Code Integration – Fetches code from GitHub.</li>
-              <li>Build & Test Automation – Uses Maven for building and unit testing.</li>
-              <li>Code Quality Analysis – SonarQube integration with quality gates.</li>
-              <li>Artifact Management – Stores builds in Nexus OSS.</li>
-              <li>Scalability & Flexibility – Multi-user support with configurations.</li>
-              <li>Automated Notifications – Email alerts for pipeline status.</li>
+              <li>Fully automated CI/CD pipeline from code push to production deployment.</li>
+              <li>Integrated static code analysis using SonarQube to ensure code quality before deployment.</li>
+              <li>Docker image scanning with Trivy to detect security vulnerabilities pre-deployment.</li>
+              <li>GitOps approach using Argo CD to synchronize Kubernetes manifests with the cluster.</li>
+              <li>Real-time Slack notifications to monitor deployment status.</li>
+              <li>Modular setup that supports future scalability and integration with other tools.</li>
             </ul>
           </div>
         </section>
@@ -185,10 +219,17 @@
             <ul
               class="list-disc marker:text-custom-blue tracking-widest space-y-3 pl-5 text-sm md:text-base"
             >
+              <li>Git </li>
+              <li>GitHub </li>
               <li>jenkins</li>
-              <li>AWS</li>
+              <li>Maven</li>
               <li>sonarQupe</li>
-              <li>nexus OSS</li>
+              <li>Docker</li>
+              <li>Docker Hub</li>
+              <li>Trivy</li>
+              <li>Argo CD</li>
+              <li>AWS</li>
+              <li>Amazon EKS</li>
               <li>slack notification</li>
             </ul>
           </div>
